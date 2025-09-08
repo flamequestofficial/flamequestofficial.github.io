@@ -390,6 +390,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.3rem;
 }
 
+.announcement.match-changelog .btn {
+  display: inline-block;
+  margin-top: 20px; /* add space above button */
+}
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .announcements-page .announcement {
@@ -581,6 +585,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 }
+
 
 
 
