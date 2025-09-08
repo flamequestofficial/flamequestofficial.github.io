@@ -371,6 +371,32 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0 12px #ff4500;
 }
 
+/* ================= Announcements Page Full Width & Centered ================= */
+.announcements-page {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  padding: 40px 20px;
+}
+
+.announcements-page .announcement {
+  width: 90%; /* wider box */
+  max-width: 1000px; /* optional: limit max width on very large screens */
+  background: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 69, 0, 0.9);
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .announcements-page .announcement {
+    width: 95%;
+    padding: 25px;
+  }
+}
+
 /* ================= Contact ================= */
 .contact-links {
   margin-top: 25px;
@@ -465,3 +491,4 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 }
+
