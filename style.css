@@ -194,11 +194,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: 25px;
   }
-
-  .hero-container .hero-box {
-    width: 100%;
-    padding: 30px;
-  }
 }
 
 .hero:nth-of-type(2) .hero-box { animation-delay: 0.3s; }
@@ -245,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ================= Content Pages ================= */
 .content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
   text-align: center;
@@ -349,20 +344,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ================= Announcements + Updates ================= */
+/* ================= Announcements ================= */
 .announcements-updates {
   display: flex;
   justify-content: center;
   margin: 40px auto;
   padding: 20px;
-  width: 95%; /* almost full width */
-  max-width: 1200px; /* optional: limit max width */
+  width: 95%;
+  max-width: 1200px;
 }
 
 .announcement {
-  min-height: 350px;
+  width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  padding: 30px;
+  padding: 40px;
   border-radius: 15px;
   box-shadow: 0 0 18px rgba(255, 69, 0, 0.9);
   text-align: left;
@@ -374,67 +369,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
   font-size: 1.6rem;
   text-shadow: 0 0 12px #ff4500;
-}
-
-.update-log {
-  display: flex;
-  min-height: 350px;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.patch-note {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 18px rgba(255, 69, 0, 0.9);
-  text-align: left;
-  font-size: 1.2rem;
-}
-
-.patch-note h3 {
-  color: #ffa500;
-  margin-bottom: 12px;
-  font-size: 1.6rem;
-  text-shadow: 0 0 12px #ff4500;
-}
-
-.patch-note ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.patch-note ul li {
-  margin: 8px 0;
-  font-size: 1rem;
-  padding-left: 25px;
-  position: relative;
-}
-
-.patch-note ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-}
-
-.patch-note.latest {
-  border: 2px solid #ffa500;
-  box-shadow: 0 0 25px #ff6347, 0 0 40px #ff4500;
-  position: relative;
-}
-
-.patch-note.latest::before {
-  content: "NEW!";
-  position: absolute;
-  top: -12px;
-  right: 15px;
-  background: #ff4500;
-  color: black;
-  font-weight: bold;
-  font-size: 0.8rem;
-  padding: 3px 8px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #ff6347;
 }
 
 /* ================= Contact ================= */
@@ -520,52 +454,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: auto;
 }
 
-/* ================= Responsive Media Queries ================= */
-
-/* Hero and general layout */
-@media (max-width: 1024px) {
-  .hero-container {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .hero-container .hero-box {
-    width: 100%;
-    padding: 30px;
-  }
-}
-
-/* Reviewer grid */
-@media (max-width: 900px) {
-  .reviewer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 0 20px 40px;
-  }
-}
-
-@media (max-width: 500px) {
-  .reviewer-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 0 15px 30px;
-  }
-}
-
-/* ================= Responsive Adjustment for Announcements ================= */
+/* ================= Responsive Adjustments ================= */
 @media (max-width: 768px) {
-  .announcements-updates {
-    grid-template-columns: 1fr; /* Full width for single box */
-    gap: 20px;
-    padding: 20px;
-  }
-
   .announcement {
     padding: 25px;
-  }
-
-  .announcement p {
-    font-size: 1.1rem;
   }
 
   .btn {
@@ -573,51 +465,3 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 }
-
-/* Image carousel */
-@media (max-width: 768px) {
-  .image-rotation {
-    margin: 2rem auto;
-    border-width: 10px;
-  }
-
-  .rotation-container img {
-    width: auto;
-    max-width: 100%;
-  }
-}
-
-/* Navigation adjustments */
-@media (max-width: 600px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-links li a {
-    padding: 8px 10px;
-    font-size: 0.9rem;
-  }
-}
-
-/* Contact adjustments */
-@media (max-width: 600px) {
-  .contact-box {
-    padding: 20px;
-  }
-
-  .contact-links {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-/* Footer adjustments */
-@media (max-width: 500px) {
-  .footer {
-    font-size: 0.8rem;
-    padding: 15px;
-  }
-}
-
-
