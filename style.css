@@ -34,6 +34,11 @@ h1, h2, h3, h4, h5, h6 {
   border: 20px solid #ffa500;
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(255, 107, 107, 0.4);
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.9s ease-out forwards;
+  animation-delay: 1.3s; /* last */
 }
 
 .rotation-container {
@@ -196,9 +201,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.hero:nth-of-type(2) .hero-box { animation-delay: 0.3s; }
-.hero:nth-of-type(3) .hero-box { animation-delay: 0.6s; }
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -238,6 +240,13 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
+/* Staggered fade-in order for Home Page */
+.hero-container .hero-box:nth-child(1) { animation-delay: 0.1s; } /* top-left */
+.hero-container .hero-box:nth-child(2) { animation-delay: 0.4s; } /* under it */
+.hero-container .hero-box:nth-child(3) { animation-delay: 0.7s; } /* about us */
+.tagline-box { animation: fadeInUp 0.9s ease-out forwards; animation-delay: 1s; }
+.image-rotation { animation-delay: 1.3s; }
+
 /* ================= Content Pages ================= */
 .content {
   max-width: 1200px;
@@ -258,6 +267,8 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(255, 69, 0, 0.9);
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .tagline-box h2 {
@@ -375,15 +386,15 @@ h1, h2, h3, h4, h5, h6 {
 .announcements-page {
   display: flex;
   justify-content: center;
-  padding: 20px 20px 60px; /* reduced top padding, more bottom breathing room */
-  margin-top: -10px; /* move box slightly higher */
+  padding: 20px 20px 60px;
+  margin-top: -10px;
 }
 
 .announcements-page .announcement {
   width: 95%;
-  max-width: 1100px; /* bigger than before */
+  max-width: 1100px;
   background: rgba(0, 0, 0, 0.9);
-  padding: 50px; /* more padding = bigger box */
+  padding: 50px;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(255, 69, 0, 1);
   text-align: left;
@@ -392,10 +403,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .announcement.match-changelog .btn {
   display: inline-block;
-  margin-top: 20px; /* add space above button */
+  margin-top: 20px;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .announcements-page .announcement {
     width: 95%;
@@ -403,7 +413,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Announcements styled like changelog */
 .announcement.match-changelog {
   background: rgba(0, 0, 0, 0.8);
   padding: 40px;
@@ -425,26 +434,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .announcement.match-changelog p {
   margin: 10px 0;
-  margin-bottom: 25px; /* 👈 gives spacing before button */
+  margin-bottom: 25px;
 }
 
 /* ================= Upcoming Features (Teasers) ================= */
 .teasers-page {
   display: flex;
   justify-content: center;
-  padding: 20px 20px 60px; /* reduced top padding, more bottom breathing room */
-  margin-top: -10px; /* move box slightly higher */
-}
-
-.teaserss-page .teaser {
-  width: 95%;
-  max-width: 1100px; /* bigger than before */
-  background: rgba(0, 0, 0, 0.9);
-  padding: 50px; /* more padding = bigger box */
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 69, 0, 1);
-  text-align: left;
-  font-size: 1.3rem;
+  padding: 20px 20px 60px;
+  margin-top: -10px;
 }
 
 .teasers.match-changelog {
@@ -470,21 +468,22 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .teasers-page .teaser {
     width: 95%;
     padding: 25px;
   }
 }
+
 /* ================= Changelog Page ================= */
 .update-log {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 95%;
+  width: 100%;
   max-width: 1000px;
-  margin: 40px auto; /* center horizontally */
+  margin: 0px auto 30px;
+  padding: 0px;
 }
 
 .patch-note {
@@ -540,6 +539,23 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 6px;
   box-shadow: 0 0 10px #ff6347;
 }
+
+/* Fade-in for announcements & changelog boxes */
+.announcement.match-changelog,
+.teasers.match-changelog,
+.update-log .patch-note {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.9s ease-out forwards;
+}
+
+.announcement.match-changelog { animation-delay: 0.1s; }
+.teasers.match-changelog { animation-delay: 0.2s; }
+
+.update-log .patch-note:nth-child(1) { animation-delay: 0.1s; }
+.update-log .patch-note:nth-child(2) { animation-delay: 0.2s; }
+.update-log .patch-note:nth-child(3) { animation-delay: 0.3s; }
+.update-log .patch-note:nth-child(4) { animation-delay: 0.4s; }
 
 /* ================= Contact ================= */
 .contact-links {
