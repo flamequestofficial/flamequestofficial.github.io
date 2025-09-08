@@ -394,6 +394,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   margin-top: 20px; /* add space above button */
 }
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .announcements-page .announcement {
@@ -433,6 +434,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   padding: 20px 20px 60px; /* reduced top padding, more bottom breathing room */
   margin-top: -10px; /* move box slightly higher */
+}
+
+.teaserss-page .teaser {
   width: 95%;
   max-width: 1100px; /* bigger than before */
   background: rgba(0, 0, 0, 0.9);
@@ -466,6 +470,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
 }
 
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .teasers-page .teaser {
+    width: 95%;
+    padding: 25px;
+  }
+}
 /* ================= Changelog Page ================= */
 .update-log {
   display: flex;
@@ -624,12 +635,3 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 }
-
-
-
-
-
-
-
-
-
