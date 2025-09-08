@@ -397,6 +397,68 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ================= Changelog Page ================= */
+.update-log {
+  display: flex;
+  min-height: 350px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.patch-note {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 18px rgba(255, 69, 0, 0.9);
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.patch-note h3 {
+  color: #ffa500;
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  text-shadow: 0 0 12px #ff4500;
+}
+
+.patch-note ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.patch-note ul li {
+  margin: 8px 0;
+  font-size: 1rem;
+  padding-left: 25px;
+  position: relative;
+}
+
+.patch-note ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+.patch-note.latest {
+  border: 2px solid #ffa500;
+  box-shadow: 0 0 25px #ff6347, 0 0 40px #ff4500;
+  position: relative;
+}
+
+.patch-note.latest::before {
+  content: "NEW!";
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  background: #ff4500;
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #ff6347;
+}
+
 /* ================= Contact ================= */
 .contact-links {
   margin-top: 25px;
@@ -491,4 +553,5 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 }
+
 
