@@ -556,16 +556,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Announcements & updates */
-@media (max-width: 900px) {
+/* ================= Responsive Adjustment for Announcements ================= */
+@media (max-width: 768px) {
   .announcements-updates {
-    grid-template-columns: 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr; /* Full width for single box */
+    gap: 20px;
+    padding: 20px;
   }
 
-  .announcement,
-  .update-log {
-    min-height: auto;
+  .announcement {
+    padding: 25px;
+  }
+
+  .announcement p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 }
 
@@ -614,3 +623,4 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px;
   }
 }
+
