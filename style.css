@@ -400,9 +400,11 @@ h1, h2, h3, h4, h5, h6 {
 /* ================= Changelog Page ================= */
 .update-log {
   display: flex;
-  min-height: 350px;
   flex-direction: column;
   gap: 20px;
+  width: 95%;
+  max-width: 1000px;
+  margin: 40px auto; /* center horizontally */
 }
 
 .patch-note {
@@ -553,5 +555,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 }
+
 
 
