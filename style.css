@@ -427,6 +427,30 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 25px; /* 👈 gives spacing before button */
 }
 
+/* ================= Upcoming Features (Teasers) ================= */
+.teasers.match-changelog {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 69, 0, 0.9);
+  text-align: center;
+  font-size: 1.2rem;
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.teasers.match-changelog h3 {
+  color: #ffa500;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  text-shadow: 0 0 12px #ff4500;
+}
+
+.teasers.match-changelog p {
+  margin: 10px 0;
+}
+
 /* ================= Changelog Page ================= */
 .update-log {
   display: flex;
@@ -585,6 +609,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 }
+
 
 
 
