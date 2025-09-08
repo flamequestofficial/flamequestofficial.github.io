@@ -351,21 +351,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ================= Announcements + Updates ================= */
 .announcements-updates {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  display: flex;
+  justify-content: center;
   margin: 40px auto;
   padding: 20px;
-  width: 95%;
-  max-width: 1400px;
-}
-
-.announcement,
-.update-log {
-  min-height: 350px;
+  width: 95%; /* almost full width */
+  max-width: 1200px; /* optional: limit max width */
 }
 
 .announcement {
+  min-height: 350px;
   background: rgba(0, 0, 0, 0.8);
   padding: 30px;
   border-radius: 15px;
@@ -383,6 +378,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .update-log {
   display: flex;
+  min-height: 350px;
   flex-direction: column;
   gap: 20px;
 }
@@ -623,4 +619,5 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px;
   }
 }
+
 
